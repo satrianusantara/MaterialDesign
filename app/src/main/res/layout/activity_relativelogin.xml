@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main4"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:columnCount="2"
     tools:context="makers.android.materialdesign.Main4Activity">
 
     <ImageView
         android:id="@+id/imgView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
         android:src="@drawable/ic_launcher" />
 
     <EditText
         android:id="@+id/editUName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="center"
+        android:layout_below="@+id/imgView"
         android:gravity="center"
         android:hint="Usernama" />
 
@@ -29,17 +25,18 @@
         android:id="@+id/editPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="center"
+        android:layout_below="@+id/editUName"
         android:gravity="center"
         android:hint="Password" />
 
     <LinearLayout
+        android:id="@+id/laybutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_below="@+id/editPass"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        >
 
         <Button
             android:id="@+id/btnLogin"
@@ -53,28 +50,28 @@
             android:layout_height="wrap_content"
             android:text="Register" />
 
-
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_columnSpan="2"
-        android:layout_gravity="center|bottom"
-        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/laybutton"
+        android:gravity="center|bottom"
+        >
 
         <ImageButton
             android:id="@+id/img1"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/fb"
-
-            />
+            android:background="@drawable/fb" />
 
         <ImageButton
             android:id="@+id/img2"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/github"
+            android:layout_toEndOf="@+id/img1"
+            android:background="@drawable/github" />
+    </RelativeLayout>
 
-            />
-    </LinearLayout>
-</GridLayout>
+
+</RelativeLayout>

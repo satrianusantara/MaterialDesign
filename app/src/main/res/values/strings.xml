@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MaterialDesign</string>
+    <string name="textArea">ini adalah bagian dari text area ini adalah bagian dari text area ini adalah bagian dari text area ini adalah bagian dari text area</string>
+    <string name="textArea2">text area ke2</string>
 </resources>
